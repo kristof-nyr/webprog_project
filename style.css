@@ -284,7 +284,7 @@ svg {
     place-self: center center;
     width: 100%;
     height: 80vh;
-    background: url("services-education.png");
+    background: url("/media/services-education.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -325,7 +325,7 @@ svg {
     place-self: center center;
     width: 100%;
     height: 80vh;
-    background: url("services-support.png");
+    background: url("/media/services-support.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
