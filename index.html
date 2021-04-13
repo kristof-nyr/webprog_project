@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Novell</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <script>
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+                var body = document.body,
+                    html = document.documentElement;
+        
+                var height = 320;
+                
+                const element = document.querySelectorAll('.main-navbar');
+                
+                if (document.body.scrollTop > height|| document.documentElement.scrollTop > height*0.8) {
+                    document.querySelector(".main-navbar").style.backgroundColor = "rgba(64, 64, 64, 1)";
+                    if (element.length !== 0) {
+                      for (var i=0; i<element.length; i++) {
+                        element[i].style.color = "white";
+                      }
+                    }
+                } else {
+                    document.querySelector(".main-navbar").style.backgroundColor = "rgba(47, 48, 53, 0)";
+                    if (element.length !== 0) {
+                      for (var i=0; i<element.length; i++) {
+                        element[i].style.color = "rgba(47 48 53 / 0)";
+                      }
+                    }
+                }
+            }
+        </script>
+        <script>
+            function changeBG(x) {
+                var img = document.querySelector(".products-bg-image");
+                switch (x.id)
+                {
+                    case "product-suse":
+                        img.src="/suse.png"
+                        break;
+                    case "product-microfocus":
+                        img.src="/microfocus_logo.png"
+                        break;
+                    case "product-server":
+                        img.src="/server.png"
+                        break;
+                    case "product-idm":
+                        img.src="/idm.png"
+                        break;
+                }
+                 img.style.visibility = "visible";
+                //  img.style.transition ="all 0.3s ease";
+            }
+
+            function defaultBG() {
+                var img = document.querySelector(".products-bg-image");
+                img.style.visibility = "hidden";
+                // img.style.transition ="all 0.3s ease";
+            }
+
+            function hoverDiv(x) {
+                    x.firstElementChild.style.top = "45%";
+                    x.lastElementChild.style.top = "45%";
+                    x.lastElementChild.style.visibility = "visible";
+                }
+
+            function defaultHoverDiv(x) {
+                    x.firstElementChild.style.top = "50%";
+                    x.lastElementChild.style.top = "50%";
+                    x.lastElementChild.style.visibility = "hidden";
+                }
+        </script>
+        <div class="main-page" id="main-page">
+            <div class="main-landing">
+                <div class="main-navbar">
+                    <ul class="menu-list">
+                        <li><a href="#main-page">Kezdőlap</a></li>
+                        <li><a href="#main-products">Termékek</a></li>
+                        <li><a href="#main-services">Szolgáltatások</a></li>
+                        <li><a href="#main-achievments">Eredmények</a></li>
+                        <li><a href="#">Kapcsolat</a></li>
+                    </ul>
+                </div>
+                <video src="/csujdejo.mp4" autoplay loop muted preload="auto" width="100%"></video>
+                <h1>Novell</h1>
+                <a class="main-btn" href="#main-products">Fedezd Fel</a>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+            <span id="main-products"></span>
+            <h1 class="products-title">Termékek</h1>
+            <div>
+                <img class="products-bg-image" src="suse.png">
+            </div>
+            <div class="main-products">
+                <div id="product-suse" onmouseover="changeBG(this)" onmouseout="defaultBG()">
+                    <a class="products-single">SUSE</a>
+                    <img src="suse.png" class="products-single-img">
+                </div>
+                <div id="product-microfocus" onmouseover="changeBG(this)" onmouseout="defaultBG()">
+                    <a class="products-single">MicroFocus</a>
+                    <img src="microfocus_logo.png" class="products-single-img">
+                </div>
+                <div id="product-server" onmouseover="changeBG(this)" onmouseout="defaultBG()">
+                    <a class="products-single">Server</a>
+                    <img src="server.png" class="products-single-img">
+                </div>
+                <div id="product-idm" onmouseover="changeBG(this)" onmouseout="defaultBG()">
+                    <a class="products-single">IDM</a>
+                    <img src="idm.png" class="products-single-img">
+                </div>
+            </div>
+            <span id="main-services"></span>
+            <div class="main-services">
+                <h1 class="services-title">Szolgáltatások</h1>
+                <div class="services-education" onmouseover="hoverDiv(this)" onmouseout="defaultHoverDiv(this)">
+                    <h1 class="services-education-title">Oktatás</h1> 
+                    <p class="services-education-desc">Lorem Ipsum is simply dummy text</p> 
+                </div>
+                <div class="services-support" onmouseover="hoverDiv(this)" onmouseout="defaultHoverDiv(this)">
+                    <h1 class="services-support-title">Támogatás</h1>   
+                    <p class="services-support-desc">Lorem Ipsum is simply dummy text</p> 
+                </div>
+            </div>
+                <div id="main-achievments" class="main-achievments">
+                    <h1 class="main-achievments-title">Eredmények</h1>
+                    <div class="achievments-customers">
+                        <h1>Ügyfelek</h1>  
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        <h1 class="achievments-count">369</h1>
+                    </div>
+                </div>
+        </div>
+    </body>
+
+</html>
