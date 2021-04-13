@@ -148,6 +148,7 @@ svg {
     z-index: -1;
     top: 0;
     margin: 0;
+    background-color: rgb(48, 48, 48);
 }
 
 .main-landing h1 {
