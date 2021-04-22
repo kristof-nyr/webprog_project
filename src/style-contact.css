@@ -1,4 +1,59 @@
-/*  */
-body {
-
+/* NOTE elements */
+html {
+    font-family: 'Roboto', sans-serif;
+    
 }
+body {
+    background-color: var(--medbrown);
+}
+/* ----------------elements */
+/* NOTE navbar override */
+.main-navbar {
+    background-color: var(--brown);
+}
+/* -----------------------navbar */
+/* NOTE team */
+.contact-team {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-title {
+    position: absolute;
+    top: 5%;
+    color: var(--wht);
+}
+
+.contact-card {
+    display: flex;
+    width: 15vw;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    /* border: 5px solid var(--lightbrown); */
+    border-radius: 5px;
+    background-color: var(--brown);
+    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.7);
+    margin: 0 2rem;
+}
+.contact-card img {
+    width: 50%;
+}
+.contact-card h3 {
+    color: var(--wht);
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.contact-card p {
+    color: var(--wht);
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+/* ----------------team  */

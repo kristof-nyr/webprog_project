@@ -12,7 +12,7 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-    background-color: #D4D4D4;
+    background-color: var(--bgpastel);
     margin: 0;
 }
 
@@ -28,8 +28,8 @@ h1, a {
 }
 
 ::selection {
-    color:#000;
-    background: #fff;
+    color:var(--blk);
+    background: var(--wht);
 }
 
 video {
@@ -43,6 +43,16 @@ video {
     /*ilter: sepia(100%) contrast(1.2) hue-rotate(320deg);*/
 }
 /* ----------------------------- elements*/
+/* NOTE variables */
+:root {
+    --bgpastel: #D4D4D4;
+    --brown: #888585;
+    --lightbrown: #e0dddc;
+    --medbrown: #A19D9B;
+    --wht: #fff;
+    --blk: #000;
+}
+/* ------------------------------variables */
 /* NOTE Animation */
 @keyframes loopText {
     to {
@@ -69,7 +79,7 @@ video {
 
 .menu-list li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--wht);
     letter-spacing: 0.15em;
     user-select: none;
 }
@@ -82,7 +92,7 @@ video {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #fff;
+  background: var(--wht);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
@@ -98,13 +108,13 @@ video {
     place-self: center start;
     position: relative;
     grid-area: mainbtn;
-    border: 2px solid #fff;
+    border: 2px solid var(--wht);
     border-radius: 10px;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px;
     margin: 0 auto;
-    color: #fff;
+    color: var(--wht);
     font-size: 42px;
     transition: 0.5s all ease;
     letter-spacing: 0.25em;
@@ -112,8 +122,8 @@ video {
 } 
 
 .main-btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--wht);
+    color: var(--blk);
     transition: 0.5s all ease;
     box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.7);
     transform: translateY(-5%);
@@ -134,14 +144,14 @@ video {
     z-index: -1;
     top: 0;
     margin: 0;
-    background-color: #D4D4D4;
+    background-color: var(--bgpastel);
 }
 
 .main-landing h1 {
     position: relative;
     grid-area: maintitle1;
     place-self: center start;
-    color: #fff;
+    color: var(--wht);
     font-weight: 300;
     font-size: 12vh;
     z-index: 4;
@@ -155,7 +165,7 @@ video {
     position: relative;
     grid-area: mainabout;
     place-self: center start;
-    color: #D4D4D4;
+    color: var(--bgpastel);
     font-weight: 300;
     font-size: 20px;
     z-index: 4;
@@ -174,7 +184,7 @@ video {
     justify-content: center;
 }
 .loop-text {
-    color: #888585;
+    color: var(--brown);
     font-family: 'Russo One', sans-serif;
     position: absolute;
     /* top: -10vh; */
@@ -215,7 +225,7 @@ video {
     grid-template-rows: auto;
     grid-template-areas:
     "suse microfocus dunno1 dunno2";
-    border: 3px solid #000;
+    border: 3px solid var(--blk);
     border-radius: 10px;
 }
 
@@ -280,7 +290,7 @@ video {
 /* NOTE Main Services */
 .main-services {
     height: 100%;
-    background-color: #e0dddc;
+    background-color: var(--lightbrown);
     width: 100vw;
     margin: 0;
     display: grid;
@@ -312,7 +322,7 @@ video {
 }
 
 .services-education-title, .services-support-title {
-    color: #fff;
+    color: var(--wht);
     font-size: 80px;
     display: flex;
     position: relative;
@@ -322,7 +332,7 @@ video {
 }
 
 .services-education-desc, .services-support-desc {
-    color: #fff;
+    color: var(--wht);
     font-size: 26px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -384,7 +394,7 @@ video {
     position: relative;
     width: 100%;
     height: 20vh;
-    background-color: #A19D9B;
+    background-color: var(--medbrown);
     grid-area: achievment1;
     place-self: center center;
     border-radius: 20px;
@@ -394,13 +404,13 @@ video {
 .main-achievments h1 {
     position: relative;
     font-size: 50px;
-    color: #fff;
+    color: var(--wht);
     margin: auto 5%;
 }
 
 .main-achievments p {
     position: relative;
-    color: #fff;
+    color: var(--wht);
     font-size: 24px;
     margin: 2% 5%;
     width: 100%;
@@ -420,7 +430,7 @@ video {
     position: relative;
     width: 100%;
     height: 20vh;
-    background-color: #A19D9B;
+    background-color: var(--medbrown);
     grid-area: achievment2;
     place-self: center center;
     border-radius: 20px;
@@ -432,7 +442,7 @@ video {
     position: relative;
     width: 100%;
     height: 20vh;
-    background-color: #A19D9B;
+    background-color: var(--medbrown);
     grid-area: achievment3;
     place-self: center center;
     border-radius: 20px;
@@ -458,14 +468,14 @@ video {
 }
 .footer-list li a {
     text-decoration: none;
-    color: #A19D9B;
+    color: var(--medbrown);
     text-transform: uppercase;
     line-height: 1.5rem;
 }
 .footer-copyright
 {
     font-weight: 300;
-    color: #A19D9B;
+    color: var(--medbrown);
     font-size: 1rem;
     margin: 0.5rem;
 }
