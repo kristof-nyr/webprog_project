@@ -51,7 +51,7 @@ body {
 }
 .contact-card p {
     color: var(--wht);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1em;
