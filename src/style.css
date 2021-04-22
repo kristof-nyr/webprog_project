@@ -241,7 +241,7 @@ video {
 }
 
 .main-products a {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
     letter-spacing: 0.1em;
     margin-bottom: 1em;
@@ -269,7 +269,7 @@ video {
 }
 
 .products-single-img {
-    width: 100px;
+    width: 150px;
     filter: saturate(0) contrast(4);
     grid-area: picture;
     place-self: center center;
