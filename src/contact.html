@@ -7,13 +7,20 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
-        <link rel="shortcut icon" type="image/jpg" href="/media/favicon.png"/>
+        <link rel="shortcut icon" type="image/jpg" href="../media/favicon.png"/>
     </head>
     <body>
+        <script>
+            function submitOverride(event) {
+                alert("Webserver in under maintenance");
+                event.preventDefault();
+                return false;
+            }
+        </script>
         <div class="contact-landing" id="contact-landing">
             <div class="main-navbar">
                 <ul class="menu-list">
-                    <li><a href="/src/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#contact-landing">Contact</a></li>
                 </ul>
             </div>        
@@ -22,31 +29,49 @@
             <h1 class="contact-title">Our Team</h1>
             <div class="contact-card">
                 <h3>Firstname Lastname</h3>
-                <img src="/media/team-pictures/face1.jpg">
+                <img src="../media/team-pictures/face1.jpg">
                 <p>Designer, Developer</p>
             </div>
             <div class="contact-card">
                 <h3>Firstname Lastname</h3>
-                <img src="/media/team-pictures/face2.jpg">
+                <img src="../media/team-pictures/face2.jpg">
                 <p>Senior Developer</p>
             </div>
             <div class="contact-card">
                 <h3>Firstname Lastname</h3>
-                <img src="/media/team-pictures/face3.jpg">
+                <img src="../media/team-pictures/face3.jpg">
                 <p>Graphic Designer</p>
             </div>
             <div class="contact-card">
                 <h3>Firstname Lastname</h3>
-                <img src="/media/team-pictures/face4.jpg">
+                <img src="../media/team-pictures/face4.jpg">
                 <p>JavaScript developer</p>
             </div>
             <div class="contact-card">
                 <h3>Firstname Lastname</h3>
-                <img src="/media/team-pictures/face5.jpg">
+                <img src="../media/team-pictures/face5.jpg">
                 <p>Project Manager</p>
             </div>
         </div>
-        <div class="contact-map"></div>
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form onsubmit="return submitOverride(event)">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="email">E-mail:</label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="jobs">Profession:</label>
+                <select name="jobs" id="jobs" class="form-select">
+                    <option value="webdev">Web Developer</option>
+                    <option value="jsdev">JavaScript Developer</option>
+                    <option value="marketing">Marketing Assistant</option>
+                    <option value="projmen">Project Manager</option>
+                </select><br>
+                <input type="submit" value="Submit" id="submitBtn">
+              </form> 
+        </div>
         <div class="footer">
             <ul class="footer-list">
                 <li><a href="index.html">Home</a></li>
