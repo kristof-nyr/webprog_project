@@ -1,21 +1,38 @@
-/* NOTE elements */
+/* NOTE Elements */
 html {
     font-family: 'Roboto', sans-serif;
     
 }
 body {
-    background-color: var(--medbrown);
+    background-color: var(--bgpastel);
 }
-/* ----------------elements */
-/* NOTE navbar override */
+/* ----------------Elements */
+/* NOTE Navbar override */
 .main-navbar {
     background-color: var(--brown);
 }
-/* -----------------------navbar */
-/* NOTE team */
+/* -----------------------Navbar */
+/* NOTE Large Text */
+.contact-large-text {
+    color: var(--brown);
+    font-family: 'Russo One', sans-serif;
+    position: absolute;
+    top: 20vh;
+    text-transform: uppercase;
+    font-size: 40vw;
+    display: inline-block;
+    white-space: nowrap;
+    animation: loopText 15s infinite linear;
+    z-index: -2;
+    filter: blur(2px);
+    user-select: none;
+    padding-left: 100%;
+}
+/* ------------------------Large text */
+/* NOTE Team */
 .contact-team {
     height: 60vh;
-    width: 100%;
+    width: var(--max-wid);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +40,7 @@ body {
 .contact-title {
     position: absolute;
     top: 5%;
-    color: var(--wht);
+    color: var(--blk);
 }
 
 .contact-card {
@@ -35,8 +52,8 @@ body {
     flex-flow: row wrap;
     /* border: 5px solid var(--lightbrown); */
     border-radius: 5px;
-    background-color: var(--brown);
-    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.7);
+    background-color: var(--medbrown);
+    box-shadow: 0 5px 0 0 var(--brownshadow);
     margin: 0 2rem;
 }
 .contact-card img {
@@ -44,20 +61,20 @@ body {
 }
 .contact-card h3 {
     color: var(--wht);
-    font-size: 20px;
+    font-size: var(--small);
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 .contact-card p {
     color: var(--wht);
-    font-size: 14px;
+    font-size: var(--xsmall);
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
-/* ----------------team  */
-/* NOTE form */
+/* ----------------Team  */
+/* NOTE Form */
 .contact-form {
     display: flex;
     justify-content: center;
@@ -66,20 +83,21 @@ body {
 .contact-form>h1 {
     position: absolute;
     top: 45%;
-    color: var(--wht);
+    color: var(--blk);
 }
 .contact-form > form {
     width: 40%;
     background: var(--lightbrown);
-    box-shadow: 0px 5px 0px 1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 0px 0px var(--brownshadow);
     border-radius: 5px;
     height: 85%;
     text-align: center;
     line-height: 2rem;
 }
 .contact-form label {
-    font-size: 24px;
+    font-size: var(--small);
     font-weight: 300;
+    text-transform: uppercase;
 }
 input[type=text] {
     width: 50%;
@@ -88,7 +106,7 @@ input[type=text] {
     padding: 0.5em 1em;
     outline: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: var(--small);
     font-weight: 300;
     color: #6b6b6b;
 }
@@ -100,14 +118,15 @@ input[type=submit]
     padding: 0.5em;
     outline: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: var(--small);
     font-weight: 300;
     color: #6b6b6b;
     margin-top: 1.5em;
+    text-transform: uppercase;
 }
 .form-select
 {
-	font-size: 16px;
+	font-size: var(--xsmall);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
     border-radius: 5px;
@@ -118,4 +137,4 @@ input[type=submit]
 	box-sizing: border-box;
 	margin: 0;
 }
-/* -------------------form */
+/* -------------------Form */

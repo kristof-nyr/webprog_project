@@ -1,24 +1,24 @@
 /*NOTE elements*/
 html {
-    height: 100%;
+    height: var(--max-wid);
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: var(--light);
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
-    height: 100%;
-    width: 100%;
+    height: var(--max-wid);
+    width: var(--max-wid);
     overflow-x: hidden;
     background-color: var(--bgpastel);
     margin: 0;
 }
 
 h1 {
-    font-size: 50px;
-    font-weight: 300;
+    font-size: var(--large);
+    font-weight: var(--light);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -35,35 +35,28 @@ h1, a {
 video {
     position: absolute;
     z-index: -1;
-    width: 100%;
+    width: var(--max-wid);
     top: 0;
     left: 0;
     padding: 0;
     margin: 0;
-    /*ilter: sepia(100%) contrast(1.2) hue-rotate(320deg);*/
 }
 /* ----------------------------- elements*/
-/* NOTE variables */
-:root {
-    --bgpastel: #D4D4D4;
-    --brown: #888585;
-    --lightbrown: #e0dddc;
-    --medbrown: #A19D9B;
-    --wht: #fff;
-    --blk: #000;
-}
-/* ------------------------------variables */
+
 /* NOTE Animation */
 @keyframes loopText {
     to {
       transform: translateX(-100%);
     }
   }
+  /* @keyframes loopTextRotated {
+    to {
+        transform: translateX(-10%) translateY(-100%);
+    }
+  } */
 /*------------------------------- animation*/
 /* NOTE Menu list (nav) */
 .menu-list {
-    /* grid-area: menu1;
-    place-self: start center; */
     position: relative;
     list-style: none;
     margin-top: 1rem;
@@ -74,7 +67,7 @@ video {
     position: relative;
     display: inline;
     padding: 0 2vw;
-    font-size: 20px;
+    font-size: var(--small);
 }
 
 .menu-list li a {
@@ -115,7 +108,7 @@ video {
     padding: 10px;
     margin: 0 auto;
     color: var(--wht);
-    font-size: 42px;
+    font-size: var(--large);
     transition: 0.5s all ease;
     letter-spacing: 0.25em;
     z-index: 4;
@@ -130,7 +123,7 @@ video {
 }
 
 .main-landing {
-    width: 100%;
+    width: var(--max-wid);
     display: grid;
     grid-template-columns: auto 60% auto;
     grid-template-rows: 30% 15% 15% 10% auto;
@@ -152,8 +145,8 @@ video {
     grid-area: maintitle1;
     place-self: center start;
     color: var(--wht);
-    font-weight: 300;
-    font-size: 12vh;
+    font-weight: var(--light);
+    font-size: var(--xlarge);
     z-index: 4;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -165,9 +158,10 @@ video {
     position: relative;
     grid-area: mainabout;
     place-self: center start;
+    text-transform: uppercase;
     color: var(--bgpastel);
-    font-weight: 300;
-    font-size: 20px;
+    font-weight: var(--light);
+    font-size: var(--small);
     z-index: 4;
     text-align: justify;
     margin: 0 auto;
@@ -187,7 +181,6 @@ video {
     color: var(--brown);
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    /* top: -10vh; */
     text-transform: uppercase;
     font-size: 40vw;
     display: inline-block;
@@ -195,7 +188,6 @@ video {
     animation: loopText 30s infinite linear;
     padding-left: 100%;
     z-index: 2;
-    /* filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.4)); */
     filter: blur(2px);
     user-select: none;
 }
@@ -221,10 +213,8 @@ video {
     margin: 5% auto;
     margin-bottom:15%;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4,25%);
     grid-template-rows: auto;
-    grid-template-areas:
-    "suse microfocus dunno1 dunno2";
     border: 3px solid var(--blk);
     border-radius: 10px;
 }
@@ -235,16 +225,17 @@ video {
     grid-template-rows: 80% 20%;
     grid-template-areas: "picture"
     "text";
-    width: 100%;
-    height: 100%;
+    width: var(--max-wid);
+    height: var(--max-wid);
     transition: 0.3s all ease;
 }
 
 .main-products a {
-    font-size: 24px;
-    font-weight: 300;
+    font-size: var(--small);
+    font-weight: var(--light);
     letter-spacing: 0.1em;
     margin-bottom: 1em;
+    text-transform: uppercase;
 }
 
 .main-products div:hover {
@@ -254,8 +245,8 @@ video {
 }
 
 .products-title {
-    font-size: 50px;
-    font-weight: 300;
+    font-size: var(--large);
+    font-weight: var(--light);
     position: relative;
     padding-left: 5%;
     text-transform: uppercase;
@@ -289,13 +280,13 @@ video {
 
 /* NOTE Main Services */
 .main-services {
-    height: 100%;
+    height: var(--max-wid);
     background-color: var(--lightbrown);
     width: 100vw;
     margin: 0;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 90%;
+    grid-template-rows: 20% 80%;
     grid-template-areas: 
     "title1 spacer1"
     "education support";
@@ -312,7 +303,7 @@ video {
 .services-education {
     grid-area: education;
     place-self: center center;
-    width: 100%;
+    width: var(--max-wid);
     height: 80vh;
     background: url("../media/services-education.png");
     background-size: cover;
@@ -323,7 +314,7 @@ video {
 
 .services-education-title, .services-support-title {
     color: var(--wht);
-    font-size: 80px;
+    font-size: var(--large);
     display: flex;
     position: relative;
     justify-content: center;
@@ -333,7 +324,7 @@ video {
 
 .services-education-desc, .services-support-desc {
     color: var(--wht);
-    font-size: 26px;
+    font-size: var(--small);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     position: relative;
@@ -353,7 +344,7 @@ video {
 .services-support {
     grid-area: support;
     place-self: center center;
-    width: 100%;
+    width: var(--max-wid);
     height: 80vh;
     background: url("../media/services-support.png");
     background-size: cover;
@@ -365,7 +356,7 @@ video {
 
 /*NOTE Main achievments*/
 .main-achievments {
-    background-color: rgb(235, 235, 235);
+    background-color: var(--light);
     height: 120vh;
     display: grid;
     grid-template-columns: 10% 1fr 10%;
@@ -392,18 +383,18 @@ video {
 .achievments-customers{
     display: flex;
     position: relative;
-    width: 100%;
+    width: var(--max-wid);
     height: 20vh;
     background-color: var(--medbrown);
     grid-area: achievment1;
     place-self: center center;
     border-radius: 20px;
     z-index: 4;
-    box-shadow: 0 8px 0 0 rgb(117, 115, 114);
+    box-shadow: 0 8px 0 0 var(--brownshadow);
 }
 .main-achievments h1 {
     position: relative;
-    font-size: 50px;
+    font-size: var(--large);
     color: var(--wht);
     margin: auto 5%;
 }
@@ -411,14 +402,14 @@ video {
 .main-achievments p {
     position: relative;
     color: var(--wht);
-    font-size: 24px;
+    font-size: var(--small);
     margin: 2% 5%;
-    width: 100%;
+    width: var(--max-wid);
 }
 .achievments-count {
     position: absolute;
     font-weight: 700;
-    font-size: 180px !important; 
+    font-size: 10rem !important; 
     bottom: -40%;
     right: 0;
     color: #615E5D !important;
@@ -428,7 +419,7 @@ video {
 .achievments-projects {
     display: flex;
     position: relative;
-    width: 100%;
+    width: var(--max-wid);
     height: 20vh;
     background-color: var(--medbrown);
     grid-area: achievment2;
@@ -440,7 +431,7 @@ video {
 .achievments-dunno {
     display: flex;
     position: relative;
-    width: 100%;
+    width: var(--max-wid);
     height: 20vh;
     background-color: var(--medbrown);
     grid-area: achievment3;
@@ -454,7 +445,7 @@ video {
 .footer {
     position: relative;
     background: #363636;
-    width: 100%;
+    width: var(--max-wid);
     height: 15vh;
     display: flex;
     flex-direction: row;
@@ -474,9 +465,9 @@ video {
 }
 .footer-copyright
 {
-    font-weight: 300;
+    font-weight: var(--light);
     color: var(--medbrown);
-    font-size: 1rem;
+    font-size: var(--small);
     margin: 0.5rem;
 }
 .footer-socials {

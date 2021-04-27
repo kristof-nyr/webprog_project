@@ -1,0 +1,23 @@
+/* NOTE variables */
+:root {
+    /* Colors */
+    --bgpastel: #D4D4D4;
+    --brown: #888585;
+    --lightbrown: #e0dddc;
+    --medbrown: #A19D9B;
+    --brownshadow: rgb(117, 115, 114);
+    --wht: #fff;
+    --blk: #000;
+    /* Font-sizes */
+    --light: 300;
+    --bold: 600;
+    --xsmall: 1rem;
+    --small: 1.25rem;
+    --medium: 2rem;
+    --large: 3rem;
+    --xlarge: 7rem;
+    /* Positions */
+    --max-wid:100%;
+    --half-wid: 50%;
+}
+/* ------------------------------variables */
