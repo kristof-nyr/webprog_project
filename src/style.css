@@ -405,6 +405,7 @@ video {
     font-size: var(--small);
     margin: 2% 5%;
     width: var(--max-wid);
+    text-transform: uppercase;
 }
 .achievments-count {
     position: absolute;
