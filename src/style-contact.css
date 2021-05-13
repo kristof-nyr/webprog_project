@@ -58,6 +58,7 @@ body {
 }
 .contact-card img {
     width: 50%;
+    user-select: none;
 }
 .contact-card h3 {
     color: var(--wht);
